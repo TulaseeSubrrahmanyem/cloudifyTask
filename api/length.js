@@ -6,7 +6,7 @@ export default function handlerLength(req, res) {
   const { strings } = req.body;
 
   if (!Array.isArray(strings)) {
-    return res.status(400).json({ error: "strings must be an array" });
+    return res.status(400).json({ error: "Invalid input" });
   }
 
   const lengths = strings.map(str => str.length);
